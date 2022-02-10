@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+  </head>
+  <body>
+    <header>
+      <h1 class="text-4xl text-center font-bold mt-7">
+        Leats Gets Some <span class="text-lime-700">Money</span>
+      </h1>
+    </header>
+    <main>
+      <section class="mt-10">
+        <div class="grid grid-cols-3 gap-4 mx-5">
+          <div class="bg-lime-500 rounded px-24 py-5 text-lime-50">
+            <h1 class="text-xl">Deposite</h1>
+            <h1 class="text-4xl">$ <span id="depositeDoller">00</span></h1>
+          </div>
+          <div class="bg-lime-500 rounded px-24 py-5 text-lime-50">
+            <h1 class="text-xl">Withdrow</h1>
+            <h1 class="text-4xl">$<span id="withdrowDoller">00</span></h1>
+          </div>
+          <div class="bg-lime-500 rounded px-24 py-5 text-lime-50">
+            <h1 class="text-xl">Balance</h1>
+            <h1 class="text-4xl">$<span id="balanceDoller">1200</span></h1>
+          </div>
+        </div>
+      </section>
+      <section class="mt-11">
+        <div class="grid grid-cols-2 gap-4 justify-center">
+          <div class="mx-auto">
+            <input
+              class="shadow appearance-none border rounded my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="deposite"
+              type="text"
+              placeholder="Deposite"
+            />
+            <button
+              class="bg-slate-200 px-5 py-2 rounded text-lime-600 font-semibold mx-auto"
+              id="dbutton"
+            >
+              Deposite
+            </button>
+          </div>
+          <div class="mx-auto">
+            <input
+              class="shadow appearance-none border rounded my-2 py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+              id="withdrow"
+              type="text"
+              placeholder="Withdrow"
+            />
+            <button
+              class="bg-slate-200 px-5 py-2 rounded text-lime-600 font-semibold mx-auto"
+              id="wbutton"
+            >
+              Withdrow
+            </button>
+          </div>
+        </div>
+      </section>
+    </main>
+    <script src="home.js"></script>
+  </body>
+</html>
