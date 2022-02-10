@@ -4,10 +4,7 @@ const PasswordInput = document.getElementById("password");
 
 button.addEventListener("click", (e) => {
   e.preventDefault();
-  if (
-    UsserInput.value == "kakon@gmail.com" &&
-    PasswordInput.value === "12345"
-  ) {
+  if (UsserInput.value && PasswordInput.value) {
     window.location.href = "home.html";
   }
 });
