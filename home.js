@@ -8,8 +8,9 @@ const depositeDoller = document.getElementById("depositeDoller");
 const withdrowDoller = document.getElementById("withdrowDoller");
 const balanceDoller = document.getElementById("balanceDoller");
 
-function error() {
-  document.getElementById("error").innerText = "Please Enter Number";
+function error(dwInput) {
+  document.getElementById("error").innerText = "Please Input Positive Number";
+  dwInput.value = "";
 }
 
 function noError() {
@@ -33,7 +34,7 @@ dbutton.addEventListener("click", () => {
     balanceDoller.innerText = totalDiposite + inputValue;
     noError();
   } else {
-    error();
+    error(deposite);
   }
 });
 
@@ -48,6 +49,6 @@ wbutton.addEventListener("click", () => {
     balanceDoller.innerText = balanceDollerValue - withdrowValue;
     noError();
   } else {
-    error();
+    error(withdrow);
   }
 });
