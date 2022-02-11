@@ -8,6 +8,7 @@ const depositeDoller = document.getElementById("depositeDoller");
 const withdrowDoller = document.getElementById("withdrowDoller");
 const balanceDoller = document.getElementById("balanceDoller");
 
+// Handle Diposite
 dbutton.addEventListener("click", () => {
   let inputValue = Number(deposite.value);
   let oldDepositeDoller = Number(depositeDoller.innerText);
@@ -18,7 +19,7 @@ dbutton.addEventListener("click", () => {
   var totalDiposite = Number(balanceDoller.innerText);
   balanceDoller.innerText = totalDiposite + inputValue;
 });
-
+// Handle withdrow
 wbutton.addEventListener("click", () => {
   let withdrowValue = Number(withdrow.value);
   let oldWithDrow = Number(withdrowDoller.innerText);
