@@ -15,8 +15,9 @@ dbutton.addEventListener("click", () => {
   depositeDoller.innerText = inputValue + oldDepositeDoller;
   deposite.value = "";
   var totalDiposite = Number(depositeDoller.innerText);
-  let balanceDollerValue = Number(balanceDoller.innerText);
-  balanceDoller.innerText = balanceDollerValue + totalDiposite;
+  let balanceInputValue = Number(deposite.value);
+  let balanceDollerInnerText = Number(balanceDoller.innerText);
+  balanceDoller.innerText = balanceInputValue + totalDiposite;
 });
 
 wbutton.addEventListener("click", () => {
