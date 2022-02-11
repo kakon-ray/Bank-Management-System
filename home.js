@@ -14,8 +14,8 @@ dbutton.addEventListener("click", () => {
 
   depositeDoller.innerText = inputValue + oldDepositeDoller;
   deposite.value = "";
+  // Update Balance
   var totalDiposite = Number(balanceDoller.innerText);
-
   balanceDoller.innerText = totalDiposite + inputValue;
 });
 
@@ -24,7 +24,7 @@ wbutton.addEventListener("click", () => {
   let oldWithDrow = Number(withdrowDoller.innerText);
   withdrowDoller.innerText = withdrowValue + oldWithDrow;
   withdrow.value = "";
-
+  // Update Balance
   let balanceDollerValue = Number(balanceDoller.innerText);
   balanceDoller.innerText = balanceDollerValue - withdrowValue;
 });
