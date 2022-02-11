@@ -14,11 +14,9 @@ dbutton.addEventListener("click", () => {
 
   depositeDoller.innerText = inputValue + oldDepositeDoller;
   deposite.value = "";
-  var totalDiposite = Number(depositeDoller.innerText);
-  let balanceInputValue = Number(deposite.value);
-  let balanceDollerInnerText = 1200;
-  balanceDollerInnerText = balanceDollerInnerText + balanceInputValue;
-  balanceDoller.innerText = balanceDollerInnerText + totalDiposite;
+  var totalDiposite = Number(balanceDoller.innerText);
+
+  balanceDoller.innerText = totalDiposite + inputValue;
 });
 
 wbutton.addEventListener("click", () => {
@@ -26,7 +24,7 @@ wbutton.addEventListener("click", () => {
   let oldWithDrow = Number(withdrowDoller.innerText);
   withdrowDoller.innerText = withdrowValue + oldWithDrow;
   withdrow.value = "";
-  let totalWithDrow = Number(withdrowDoller.innerText);
+
   let balanceDollerValue = Number(balanceDoller.innerText);
-  balanceDoller.innerText = balanceDollerValue - totalWithDrow;
+  balanceDoller.innerText = balanceDollerValue - withdrowValue;
 });
