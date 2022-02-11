@@ -8,32 +8,46 @@ const depositeDoller = document.getElementById("depositeDoller");
 const withdrowDoller = document.getElementById("withdrowDoller");
 const balanceDoller = document.getElementById("balanceDoller");
 
+function error() {
+  document.getElementById("error").innerText = "Please Enter Number";
+}
+
+function noError() {
+  document.getElementById("error").innerText = "";
+}
+
+function addDoller(inputValue, dWDoller, dwInput) {
+  let depositeWithdroDollerNum = Number(dWDoller.innerText);
+  dWDoller.innerText = inputValue + depositeWithdroDollerNum;
+  dwInput.value = "";
+  return dWDoller.innerText;
+}
+
 // Handle Diposite
 dbutton.addEventListener("click", () => {
   let inputValue = Number(deposite.value);
   if (typeof inputValue == "number" && inputValue >= 1) {
-    let oldDepositeDoller = Number(depositeDoller.innerText);
-
-    depositeDoller.innerText = inputValue + oldDepositeDoller;
-    deposite.value = "";
+    addDoller(inputValue, depositeDoller, deposite);
     // Update Balance
     var totalDiposite = Number(balanceDoller.innerText);
     balanceDoller.innerText = totalDiposite + inputValue;
+    noError();
   } else {
-    document.getElementById("error").innerText = "Please Enter Number";
+    error();
   }
 });
+
 // Handle withdrow
 wbutton.addEventListener("click", () => {
   let withdrowValue = Number(withdrow.value);
   if (typeof withdrowValue == "number" && withdrowValue >= 1) {
-    let oldWithDrow = Number(withdrowDoller.innerText);
-    withdrowDoller.innerText = withdrowValue + oldWithDrow;
-    withdrow.value = "";
+    addDoller(withdrowValue, withdrowDoller, withdrow);
+
     // Update Balance
     let balanceDollerValue = Number(balanceDoller.innerText);
     balanceDoller.innerText = balanceDollerValue - withdrowValue;
+    noError();
   } else {
-    document.getElementById("error").innerText = "Please Enter Number";
+    error();
   }
 });
